@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand sticky-top">
+<nav class="navbar navbar-expand fixed-top">
 	<div class="container-fluid container-xl">
 		<a class="navbar-brand" href="#">
 			<img src="/tools/src/imgs/loga/icon.png" alt="" width="60" class="d-inline-block align-text-top">
