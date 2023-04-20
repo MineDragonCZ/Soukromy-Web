@@ -1,0 +1,156 @@
+:root {
+	--author: "Vojtěch Šín";
+
+	--bodyBackground: #3C3C3C;
+	--footerBackground: #008f07;
+	--cardBackground: #85f8752f;
+
+	--textColor: #c9c9c9;
+	--linkColor: #fff;
+	--cardDescColor: #969696;
+	--unsedLinesColor: #23c914;
+
+	--btns: #0c9c13;
+	--btnsHover: #0fbe17;
+}
+
+a {
+	font-weight: bold;
+	color: var(--textColor);
+}
+
+a:hover {
+	color: var(--linkColor);
+}
+
+.nav-link {
+	font-weight: bold;
+	color: var(--textColor) !important;
+}
+
+.nav-link::after {
+	transition: all 0.5s;
+	--width: 0px;
+}
+
+.nav-link:hover::after {
+	--width: 60%;
+}
+
+.underlined:after, .underlined-80:after, .underlined-40:after, .underlined-120:after, .nav-link::after {
+	content: "" !important;
+	display: block !important;
+	height: 4px !important;
+	width: var(--width) !important;
+	margin: 10px auto auto !important;
+	border-radius: 50px !important;
+	opacity: 1 !important;
+	background: var(--unsedLinesColor) !important;
+	box-sizing: border-box !important;
+	transform: translateY(-10px);
+}
+
+.nav-link:hover {
+	color: var(--linkColor) !important;
+}
+
+* {
+	color: var(--textColor);
+}
+
+.nodecord {
+	text-decoration: none !important;
+}
+
+body {
+	background-color: var(--bodyBackground);
+	min-height: 100vh;
+	padding-bottom: 250px;
+}
+
+footer {
+	background-color: var(--footerBackground);
+	padding-top: 25px;
+	padding-bottom: 25px;
+	width: 100%;
+	max-width: 100% !important;
+	position: absolute;
+	bottom: 0;
+	overflow-x: hidden !important;
+}
+
+
+.bublifuk {
+	background-color: var(--back);
+	color: var(--color);
+	padding: 5px;
+	border-radius: 5px;
+	white-space: nowrap;
+}
+
+
+.btn-primary {
+	background-color: var(--btns) !important;
+	border: none !important;
+}
+
+.btn-primary {
+	background-color: var(--btnsHover) !important;
+	border: none !important;
+}
+
+.btn-secondary {
+	background: transparent !important;
+	border: 1px solid;
+	border-color: var(--btns) !important;
+}
+
+.btn-secondary {
+	background: transparent !important;
+	border: 1px solid;
+	border-color: var(--btnsHover) !important;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+.wrap {
+	white-space: wrap;
+}
+
+.break-word {
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.karta {
+	background: var(--cardBackground);
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.card-title {
+	font-size: 2vw;
+	font-weight: bold;
+	color: var(--textColor);
+	text-align: center;
+}
+
+.card-desc {
+	font-size: 1vw;
+	padding-top: 15px;
+	color: var(--cardDescColor);
+	text-align: left;
+}
+
+.card-foot {
+	font-size: 0.75vw;
+	padding-top: 15px;
+	color: var(--btns);
+	text-align: center;
+}
+
+.spacer {
+	margin-bottom: 50px;
+}
