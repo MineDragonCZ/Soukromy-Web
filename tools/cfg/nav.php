@@ -5,11 +5,11 @@
 		</a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link" aria-current="page" href="#refer">Reference</a>
-			</li>
-			<li class="nav-item">
 				<a class="nav-link" href="#portfolio">Portfolio</a>
 			</li> 
+			<li class="nav-item">
+				<a class="nav-link" href="#refer">Reference</a>
+			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#cenik">Ceník</a>
 			</li>

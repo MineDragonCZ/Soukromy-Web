@@ -36,6 +36,9 @@ a:hover {
 .nav-link:hover::after {
 	--width: 60%;
 }
+nav{
+	background: var(--bodyBackground);
+}
 
 .underlined:after, .underlined-80:after, .underlined-40:after, .underlined-120:after, .nav-link::after {
 	content: "" !important;
@@ -65,7 +68,7 @@ a:hover {
 body {
 	background-color: var(--bodyBackground);
 	min-height: 100vh;
-	padding-bottom: 250px;
+	position: relative;
 }
 
 footer {
@@ -131,7 +134,14 @@ footer {
 }
 
 .card-title {
-	font-size: 2vw;
+	font-size: 1.3vw;
+	font-weight: bold;
+	color: var(--textColor);
+	text-align: center;
+}
+
+.topic-title {
+	font-size: 2.5vw;
 	font-weight: bold;
 	color: var(--textColor);
 	text-align: center;
