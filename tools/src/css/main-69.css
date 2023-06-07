@@ -474,6 +474,9 @@ header > .text-dec-3{
 	z-index: 11;
 	position: relative;
 }
+.karta-normal-shadow{
+	box-shadow: -53px 53px 45px 10px rgba(0,0,0,0.3);
+}
 .karta-normal-p-min{
 	background: var(--cardbacks);
 	color: var(--fifth);
@@ -585,6 +588,9 @@ footer{
 }
 .left{
 	text-align: left;
+}
+.right{
+	text-align: right;
 }
 
 .y-25{

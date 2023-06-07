@@ -5,7 +5,7 @@
  */
 
 ?>
-<div class="d-md-block d-none" style="position: relative !important; z-index: 98;">
+<div class="d-lg-block d-none" style="position: relative !important; z-index: 98;">
 	<div class="center" style="position: absolute !important; top: min(80vh, 700px); left: 25px; right: 25px;">
 		<div style="position: relative !important;">
 			<div class="row justify-content-center">
