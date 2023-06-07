@@ -14,7 +14,7 @@
 	<div id="bodyContent" style="position: relative;"> <!-- BODY V2 -->
 
 		<!-- DESKTOP NAVIGATION -->
-		<nav class="navbar navbar-expand back-primary pb-0" style="z-index: 99 !important; position: sticky; top: 0;">
+		<nav class="navbar navbar-expand back-primary pb-0 embed-karta" style="--color: #119C32AA; z-index: 99 !important; position: sticky; top: 0;">
 			<div class="container-fluid container-xl">
 				<a class="navbar-brand" href="/#">
 					<img loading="lazy" src="/tools/src/imgs/loga/logo2.png" alt="" height="60" class="d-inline-block align-text-top">

@@ -229,9 +229,48 @@ include("tools/cfg/phpPage.php");
 		<button type="button" data-bs-target="#refer" data-bs-slide-to="1" class="" aria-current="false" aria-label="Slide 2"></button>
 		<button type="button" data-bs-target="#refer" data-bs-slide-to="2" class="" aria-current="false" aria-label="Slide 3"></button>
 		<button type="button" data-bs-target="#refer" data-bs-slide-to="3" class="" aria-current="false" aria-label="Slide 4"></button>
+		<button type="button" data-bs-target="#refer" data-bs-slide-to="4" class="" aria-current="false" aria-label="Slide 5"></button>
 	</div>
 	<div class="carousel-inner pb-4">
 		<div class="carousel-item active" data-bs-interval="10000">
+			<div class="col-12">
+				<div class="row justify-content-center">
+					<div class="col-10 m-xl-0 mt-4 pb-3">
+						<div class="h-100 back-karta backImg embed-karta" style="--color: #119C32AA;">
+							<div class="row align-items-center" style="height: 450px; overflow-y: auto;">
+								<div class="col-xl-2 col-2">
+									<img loading="lazy" class="img-100" style="border-radius: 50%;" src="https://cdn.discordapp.com/avatars/530159153482694666/f241455682994bcf457b4cae6220dce6" alt="">
+								</div>
+								<div class="col-xl-10 col-10 align-items-center">
+									<div class="col-12 card-title text-xml left">
+										<b>Tatsuya</b>
+									</div>
+									<div class="card-desc left">
+										Quality in a Minecraft mod is rather rare, most mods don't pay as much attention to detail and other small details.<br/>
+										Vojtech does, he makes his mod beautiful, functional, practical, and overall just phenomenal. It is very with the amount of care and work he puts into this mod that he wants it to be the best Stargate mod out there, and it is.<br/>
+										He quickly responds to issues to make sure that people who experience his mod have the best possible time possible.<br/>
+										A Dev should also be active within the community, and Mine does that so perfectly.<br/>
+										Overall, this man is a developer that dev's should strive for, a mix between nice quality work, and an approachable aura.<br/>
+										<br/>
+										<i>
+											Kvalita v Minecraft modu je spíše vzácná, většina modů nevěnuje tolik pozornosti detailům a dalším malým detailům.<br/>
+											Vojtěch ano, dělá svůj mod krásný, funkční, praktický a celkově prostě fenomenální. Právě s množstvím péče a práce, kterou tomuto modu věnuje, chce, aby to byl nejlepší mod Stargate na trhu, a také tomu tak je.<br/>
+											Rychle reaguje na problémy, aby se ujistil, že lidé, kteří zažijí jeho mod, měli ten nejlepší možný čas.<br/>
+											Vývojář by měl být také aktivní v rámci komunity a můj to dělá dokonale.<br/>
+											Celkově je tento muž vývojář, o kterého by se vývojáři měli snažit, mix mezi kvalitní prací a přístupnou aurou.<br/>
+										</i>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 center mt-2">
+								<span class="bublifuk" style="--back: var(--waves5);"><span class="text-colored"><b>Just Stargate Mod</b></span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="carousel-item" data-bs-interval="10000">
 			<div class="col-12">
 				<div class="row justify-content-center">
 					<div class="col-10 m-xl-0 mt-4 pb-3">
@@ -245,12 +284,8 @@ include("tools/cfg/phpPage.php");
 										<b>Professor</b>
 									</div>
 									<div class="card-desc left">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis omnis tempora dolor. 
-										Corrupti similique alias illo dolorem nulla, animi laudantium iusto tenetur, quidem aspernatur dignissimos distinctio soluta. Delectus, doloremque.
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis omnis tempora dolor. 
-										Corrupti similique alias illo dolorem nulla, animi laudantium iusto tenetur, quidem aspernatur dignissimos distinctio soluta. Delectus, doloremque.
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis omnis tempora dolor. 
-										Corrupti similique alias illo dolorem nulla, animi laudantium iusto tenetur, quidem aspernatur dignissimos distinctio soluta. Delectus, doloremque.
+										Nedávno nám na webu dělal náborový systém a musím teda uznat, že se to povedlo. Systém je přehledný, jednoduchý a při tom funkční tak, jak má být!<br/>
+										Již nemusím vypisovat e-maily všem postupujícím/nepostupujícím účastníkům, ale jenom kliknu na tlačítko a je to.
 									</div>
 								</div>
 							</div>
