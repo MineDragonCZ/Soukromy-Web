@@ -1,0 +1,16 @@
+
+ErrorDocument 404 /#
+ErrorDocument 403 /403/#
+
+RewriteEngine On
+
+Header set X-XSS-Protection "1; mode=block" 
+Header always set X-Content-Type-Options nosniff 
+Header set X-Download-Options: noopen 
+Header set X-Frame-Options DENY
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Strict-Transport-Security "max-age=2592000; includeSubDomains"
+Header set Content-Security-Policy "img-src * data: blob:; upgrade-insecure-requests;"
+Header set Permissions-Policy "camera=(self), fullscreen=(*), geolocation=(self), payment=()"
+
+ServerSignature Off

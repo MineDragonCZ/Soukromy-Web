@@ -1,0 +1,1052 @@
+/**
+* MAIN CSS FILE
+* @author MineDragonCZ_
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Mouse+Memoirs&family=Bebas+Neue&display=swap');
+:root{
+	--author: "MineDragonCZ_";
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: 4px;
+    scrollbar-color: var(--secondary);
+	scrollbar-track-color: transparent;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 4px;
+    border: none;
+  }
+/* =========================== */
+html, body {
+    max-width: 100%;
+}
+html{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+body{
+	background: var(--primary);
+	font-family: 'Varela Round', sans-serif;
+	transition: all 0.7s ease-in-out;
+	position: relative;
+	min-height: 100vh;
+	position: relative;
+}
+
+.div-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#bodyLoading{
+	height: 100vh;
+	opacity: 0;
+	transition: all 0.7s ease-in-out;
+}
+
+#bodyContent{
+	opacity: 0;
+	transition: all 0.7s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, td{
+	color: var(--fifth);
+}
+b {
+	color: var(--secondary);
+}
+a{
+	font-weight: bold;
+}
+.nodecor{
+	text-decoration: none !important;
+}
+.nobold{
+	font-weight: normal !important;
+}
+a:hover{
+	color: var(--secondary) !important;
+}
+a.pp-active{
+	color: var(--secondary) !important;
+	opacity: 1 !important;
+}
+a:focus{
+	color: var(--secondary) !important;
+}
+
+.pp-page{
+	display: none;
+}
+
+.backImg{
+	/*padding-top: 50px;*/
+	
+	background: var(--primary) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1007%26quot%3b)' fill='none'%3e%3cpath d='M1078.6772899047598 491.57291103076176L966.4230767615528 379.3186978875548 854.1688636183459 491.57291103076176 966.4230767615528 603.8271241739687z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1252.1594884482518 257.7170304520987L1106.8445208569701 173.8193947959906 1168.2618527921436 403.0319980433802z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M503.2917095632401 310.21122926191424L408.33008714835717 348.57821516538263 446.6970730518255 443.5398375802656 541.6586954667084 405.1728516767972z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M724.7205058282486 197.42048099311057L650.9280551997942 257.17642928236376 710.6840034890475 330.96887991081815 784.4764541175018 271.2129316215649z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M897.6169274219984 158.08043565203315L749.5121004976847 137.12170537326315 796.3711576581918 259.19372276396183z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M269.11 399.29 a159.5 159.5 0 1 0 319 0 a159.5 159.5 0 1 0 -319 0z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1320.001493443191 479.4641515017943L1298.1071040467893 323.6774761005472 1142.3204286455423 345.57186549694904 1164.214818041944 501.3585408981961z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-9.18 509.79 a178.27 178.27 0 1 0 356.54 0 a178.27 178.27 0 1 0 -356.54 0z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M502.473156436623 279.1933749876436L447.84474734211744 266.58141299592785 456.2410089017966 354.8300076335441z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M23.018154261783103 331.4324536338951L81.71208647514591 314.60223939967307 27.119799017131477 234.97644819673985z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M577.13 445.12 a176.07 176.07 0 1 0 352.14 0 a176.07 176.07 0 1 0 -352.14 0z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-32.21 85.7 a98.45 98.45 0 1 0 196.9 0 a98.45 98.45 0 1 0 -196.9 0z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M472.45 292.31 a131.03 131.03 0 1 0 262.06 0 a131.03 131.03 0 1 0 -262.06 0z' fill='rgba(17%2c 156%2c 50%2c 0.2)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1007'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e") !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	position: relative;
+	width: 100%;
+	left: 0;
+	z-index: -2;
+	transition: all 0.5s ease-in-out;
+}
+
+.backImg-fixed{
+	background-attachment: fixed !important;
+}
+
+.servers-background{
+	background-image: linear-gradient(var(--waves2) 0%, var(--waves5) 90%), var(--backimg1) !important;
+	background-position: center;
+	background-repeat: no-repeat !important;
+	background-size: cover;
+}
+
+.b-radius-none{
+	border-radius: 0 !important;
+}
+
+.pixel-img{
+	image-rendering: pixelated;
+}
+
+.preloader{
+	display: block;
+	position: fixed;
+	z-index: -5;
+	left: -300%;
+	width: 100px;
+	height: 100px;
+}
+.preloader1{
+	background-image: var(--backimg1);
+}
+.preloader2{
+	background-image: var(--backimg2);
+}
+.preloader3{
+	background-image: var(--backimg3);
+}
+.preloader4{
+	background-image: var(--backimg4);
+}
+.preloader5{
+	background-image: url("/tools/src/imgs/ikonky/no-wifi.png");
+}
+/*@keyframes header-back {
+	20%{
+		background-image: var(--backimg1);
+	}
+	25%{
+		background-image: var(--backimg2);
+	}
+	45%{
+		background-image: var(--backimg2);
+	}
+	50%{
+		background-image: var(--backimg3);
+	}
+	70%{
+		background-image: var(--backimg3);
+	}
+	75%{
+		background-image: var(--backimg4);
+	}
+	95%{
+		background-image: var(--backimg4);
+	}
+	100%{
+		background-image: var(--backimg1);
+	}
+}*/
+.skin{
+	aspect-ratio: 1/1;
+	position: relative;
+	filter: drop-shadow(5px 5px 5px #00000077);
+}
+.skin > img{
+	width: 85%;
+}
+header > .waves{
+	position: absolute;
+	width: 150%;
+	bottom: 0;
+	overflow: hidden;
+}
+header{
+	overflow: hidden;
+	height: max(100vh, 900px);
+	max-height: 80vw;
+}
+
+
+
+.avatar {
+	margin: 3px;
+	transition: margin .3s;
+	position: relative;
+}
+.avatar > img{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+.avatar > span{
+	position: absolute;
+	opacity: 0;
+	transition: opacity .3s;
+	top: 20px;
+	left: -15000px;
+	text-align: center;
+	z-index: 99;
+}
+.avatar > span > span{
+	z-index: 99;
+}
+.avatar img:hover + span{
+	opacity: 1;
+	left: 0;
+}
+.avatars-list{
+	position: relative;
+}
+
+
+@keyframes waving {
+	0%{
+		transform: translateX(0);
+	}
+	50%{
+		transform: translateX(-25%);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+@keyframes waving-reverse {
+	0%{
+		transform: translateX(-25%);
+	}
+	50%{
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateX(-25%);
+	}
+}
+
+header > .waves > .p1{
+	fill: var(--waves1);
+	/*animation: waving 25s infinite ease-in-out;*/
+	transition: all 0.5s ease-in-out;
+}
+header > .waves > .p2{
+	fill: var(--waves2);
+	/*animation: waving-reverse 45s infinite ease-in-out;*/
+	transition: all 0.5s ease-in-out;
+}
+header > .waves > .p3{
+	fill: var(--waves3);
+	/*animation: waving 55s infinite ease-in-out;*/
+	transition: all 0.5s ease-in-out;
+}
+header > .waves > .p4{
+	fill: var(--waves4);
+	/*animation: waving-reverse 68s infinite ease-in-out;*/
+	transition: all 0.5s ease-in-out;
+}
+header > .waves > .p5{
+	fill: var(--waves5);
+	/*animation: waving 75s infinite ease-in-out;*/
+	transition: all 0.5s ease-in-out;
+}
+
+.h-title{
+	margin-top: 120px;
+	font-family: 'Bebas Neue', 'Mouse Memoirs', sans-serif;
+	font-size: 105px;
+	text-align: center;
+	color: var(--navlink);
+
+}
+.h-desc{
+	font-size: 35px;
+	text-align: left;
+	font-weight: bold;
+	text-align: center;
+	color: var(--navlink);
+	white-space: nowrap; 
+	/*padding-bottom: 150px;*/
+}
+header > .text-dec{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: -25px;
+	z-index: -1;
+	border-radius: 0 25% 100% 0;
+}
+header > .text-dec-1{
+	width: 45%;
+	backdrop-filter: blur(15px);
+}
+header > .text-dec-2{
+	width: 55%;
+	backdrop-filter: blur(5px);
+}
+header > .text-dec-3{
+	width: 65%;
+	backdrop-filter: blur(2px);
+}
+
+
+.navbar{
+	transition: all 0.5s ease-in-out !important;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	/*background: var(--navback);*/
+	padding-bottom: 25px;
+}
+.nav-link{
+	cursor: pointer;
+	font-size: 110%;
+	color: var(--navlink);
+	font-weight: bold;
+	opacity: 0.7;
+	transition: opacity .3s;
+}
+.nav-link:hover{
+	color: var(--navlink) !important;
+	opacity: 1;
+}
+.nav-link:focus{
+	color: var(--navlink);
+}
+.disabledd{
+	font-size: 130%;
+	opacity: 0.3 !important;
+	cursor: not-allowed !important;
+}
+.disabledd-2{
+	font-size: 100% !important;
+}
+.disabledd:hover{
+	opacity: 0.3 !important;
+}
+
+.navbar-toggler{
+	color: var(--navlink) !important;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.dropdown-button{
+	cursor: pointer;
+}
+.dropdown-button::after{
+	content: "";
+}
+.dropdown-content{
+	list-style-type: none;
+	position: absolute;
+	padding-left: 5px;
+	display: none;
+	background: var(--cardbacks);
+	padding: 15px;
+	border: none;
+	border-radius: 3px;
+	min-width: 100%;
+	width: fit-content;
+}
+.dropdown-content-up{
+	bottom: 30px !important;
+}
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+.dropdown-content > li{
+	left: 0;
+}
+.dropdown-link{
+	text-decoration: none;
+	font-size: 130%;
+	color: var(--navlink);
+	opacity: 0.7;
+	transition: opacity .3s;
+}
+.dropdown-link:hover{	
+	color: var(--navlink) !important;
+	opacity: 1;
+}
+
+.toggleDown{
+	display: none;
+}
+.toggleDown:has(> li > a.pp-active) {
+	display: block;
+}
+
+.underlined:after, .underlined-80:after, .underlined-40:after, .underlined-120:after{
+	content: ""!important;
+	display: block!important;
+	height: 4px!important;
+	width: 60%!important;
+	margin: 10px auto auto!important;
+	border-radius: 50px!important;
+	opacity: 1!important;
+	background: var(--secondary)!important;
+	box-sizing: border-box!important;
+	transform: translateY(-10px);
+}
+.underlined-40:after{
+	width: 40px!important;
+}
+.underlined-80:after{
+	width: 80px!important;
+}
+.underlined-120:after{
+	width: 120px!important;
+}
+.underlined{
+	padding-bottom: 0;
+}
+
+
+.topic-title{
+	font-size: 31px;
+	text-align: center;
+	color: var(--fifth);
+}
+.card-title{
+	font-size: 24px;
+	text-align: center;
+	color: var(--fifth);
+}
+.card-desc{
+	font-size: 17px;
+	text-align: left;
+	color: var(--third);
+}
+.card-desc-larger{
+	font-size: 21px;
+	text-align: left;
+	color: var(--third);
+}
+.card-foot{
+	font-size: 17px;
+	color: var(--secondary);
+	text-align: left;
+	opacity: 0.8;
+}
+
+.karta-normal{
+	background: var(--cardbacks);
+	color: var(--fifth);
+	padding: 45px;
+	border-radius: 57px;
+
+	box-shadow: -53px 53px 45px 10px rgba(0,0,0,0.3);
+	z-index: 11;
+	position: relative;
+}
+.karta-normal-p-min{
+	background: var(--cardbacks);
+	color: var(--fifth);
+	padding: 25px;
+	border-radius: 37px;
+
+	box-shadow: -53px 53px 45px 10px rgba(0,0,0,0.3);
+	z-index: 11;
+	position: relative;
+}
+.img-shadow{
+	filter: drop-shadow(-25px 80px 20px rgba(0,0,0,0.3));
+	z-index: 8;
+}
+.img-100{
+	width: 100%;
+	aspect-ratio: initial !important;
+}
+
+footer{
+	background: var(--footer) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1014%26quot%3b)' fill='none'%3e%3cpath d='M14.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM14.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM16.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM18.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM20.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM26.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM26.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM28.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM28.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM28.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM28.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM30.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM30.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM30.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM30.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM30.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM32.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM32.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM32.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM32.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM32.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM32.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM32.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM34.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM34.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM34.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM34.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM34.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM34.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM36.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM36.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM36.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM36.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM36.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM36.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM36.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM38.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM38.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM38.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM38.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM38.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM38.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM40.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM40.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM40.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM40.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM40.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM42.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM42.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM42.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM42.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM42.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM42.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM44.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM44.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM44.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM44.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM44.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM44.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM46.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM46.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM46.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM46.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM46.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM48.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM48.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM48.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM48.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM48.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM50.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM50.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM50.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM50.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM52.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM52.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM52.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM52.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM52.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM54.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM54.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM54.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM54.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM54.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM56.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM56.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM56.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM56.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM56.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM56.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM58.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM58.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM58.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM58.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM58.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM60.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM60.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM60.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM60.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM60.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM60.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM60.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM62.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM62.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM62.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM62.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM62.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM62.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM62.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM62.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM62.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM64.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM66.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM68.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM70.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM72.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM74.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM76.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM78.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM80.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM82.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM84.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM86.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM88.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM90.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM92.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM94.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM96.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM98.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM100.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM102.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM104.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM106.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM108.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM110.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM112.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM114.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM116.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 142.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 132.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM118.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 144.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 142.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 140.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 138.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 136.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 134.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 132.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 130.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM120.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 144.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 142.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 140.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 138.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 136.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 134.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 132.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 130.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM122.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 144.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 140.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 138.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 136.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 134.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 132.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 130.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM124.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 138.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 134.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 132.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 130.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM126.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 130.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM128.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM130.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM132.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM134.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM136.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM138.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM140.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM142.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM144.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM146.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM148.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM150.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM152.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM154.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM156.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM158.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM158.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM158.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM158.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM158.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM158.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM158.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM158.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM160.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM160.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM160.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM160.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM160.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM160.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM160.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM162.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM162.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM162.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM162.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM162.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM162.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM164.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM164.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM164.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM164.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM164.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM164.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM164.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM166.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM166.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM166.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM166.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM166.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM166.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM166.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM168.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM168.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM168.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM168.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM168.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM168.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM170.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM170.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM170.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM170.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM170.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM170.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM170.03 8.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM172.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM172.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM174.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM174.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM174.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM176.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM176.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM176.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM176.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM176.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM176.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM176.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM178.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM178.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM178.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM178.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM178.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM178.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM178.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM178.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM178.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM180.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM182.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM184.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM186.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM188.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM190.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM192.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM194.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM196.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM198.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM200.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM202.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM204.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM206.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM208.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM210.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM212.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM214.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM216.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM218.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM220.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM222.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM224.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM226.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM228.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM230.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM232.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM234.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM236.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM238.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM240.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM242.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM244.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM246.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM248.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM250.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM252.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM254.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM256.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM258.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM260.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM262.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM264.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM266.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM268.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM270.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM272.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM274.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM276.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM278.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM280.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM282.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM284.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM286.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM288.03 10.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM290.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM292.03 12.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM294.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM296.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 80.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 70.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM298.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 76.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM300.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM302.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 68.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM304.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM306.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 88.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 86.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 66.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM308.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 84.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 64.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 58.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM310.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 90.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 74.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 62.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 60.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM312.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 72.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM314.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 78.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM316.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 82.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM318.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM320.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 48.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM322.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM324.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM326.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 56.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM328.03 16.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 92.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 42.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM330.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 54.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 52.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 50.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM332.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 104.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 102.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM334.03 14.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 130.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 106.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 94.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 46.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 40.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM336.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 132.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 98.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM338.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 132.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 130.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 112.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 110.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 100.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM340.03 18.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 124.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 114.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 96.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 44.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM342.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 122.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 120.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 118.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 116.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM344.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM346.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM346.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM346.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM346.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM346.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM346.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM348.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM348.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM348.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM348.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM348.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM348.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM348.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM350.03 38.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM350.03 36.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM350.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM350.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM350.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM350.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM350.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM350.03 20.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM352.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM352.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM352.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM352.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM352.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM352.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM354.03 34.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM354.03 32.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM354.03 30.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM354.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM354.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM354.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM354.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM356.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM356.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM356.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM358.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM358.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM358.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM358.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM360.03 136.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM360.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM360.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM360.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM360.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM362.03 136.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM362.03 134.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM362.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM362.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM362.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM362.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM364.03 132.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM364.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM364.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM364.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM364.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM366.03 132.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM366.03 126.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM366.03 28.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM366.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM366.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM366.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM368.03 130.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM368.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM368.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM368.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM368.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM370.03 128.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM370.03 108.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM370.03 26.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM370.03 24.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0zM370.03 22.07 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0z' transform='scale(3.73)' fill='rgba(17%2c 156%2c 50%2c 0.2)'%3e%3c/path%3e%3cpath d='M0 0 ' transform='scale(3.73)' fill='rgba(255%2c 0%2c 0%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1014'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+	margin-top: 125px;
+	padding-top: 100px;
+	padding-bottom: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80vw;
+}
+
+.mode-switcher:after{
+	content: var(--icon);
+	font-size: 130%;
+}
+
+.card{
+	background: transparent;
+	border: none;
+	border-radius: 0;
+}
+
+.karta{
+	border-radius: 5px;
+	background: var(--cardbacks);
+	color: var(--fifth);
+	position: relative;
+}
+.offset{
+	margin: 15px;
+}
+
+.a-team-colored-line{
+	background: var(--bcolor);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 35px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.social-circle{
+	background: var(--primary);
+	padding: 12px;
+	margin: 2px;
+	border-radius: 25px;
+}
+
+.social-circle-text{
+	text-align: left;
+	font-size: 130%;
+	font-weight: bold;
+	transform: translateY(15%);
+}
+
+.back-primary{
+	background: var(--primary);
+}
+.back-karta{
+	background: var(--primary);
+	padding: 12px;
+	border-radius: 12px;
+	position: relative;
+}
+.embed-karta{
+	border-bottom: 5px solid;
+	border-bottom-color: var(--color) !important;
+}
+.bordered-karta-orange{
+	border: 2px dashed;
+	border-color: var(--secondary);
+	padding: 12px;
+	border-radius: 12px;
+	position: relative;
+}
+.bordered-input-orange{
+	border: 1px solid !important;
+	border-color: var(--secondary) !important;
+}
+
+.spacer{
+	padding-bottom: 50px;
+}
+.spacer-lg{
+	padding-bottom: 150px;
+}
+.center{
+	text-align: center;
+}
+.left{
+	text-align: left;
+}
+
+.y-25{
+	transform: translateY(-25%);
+}
+.y-20{
+	transform: translateY(-20%);
+}
+.y-23{
+	transform: translateY(-23%);
+}
+
+.container-header{
+	position: absolute;
+	top: 35vh;
+	left: 0;
+	right: 0;
+}
+
+.text-sm{
+	font-size: 13px;
+}
+.text-md{
+	font-size: 17px;
+}
+.text-lg{
+	font-size: 19px;
+}
+.text-xl{
+	font-size: 25px;
+}
+.text-xml{
+	font-size: 32px;
+}
+.text-xxl{
+	font-size: 45px;
+}
+.text-colored{
+	color: var(--secondary);
+}
+
+.bublifuk{
+	background: var(--back);
+	border-radius: 10px;
+	padding: 4px 6px;
+	color: var(--fifth);
+}
+
+.bublifuk-2{
+	border-radius: 10px;
+	padding: 4px 6px;
+	color: var(--fifth);
+}
+.table-center{
+	vertical-align: middle;
+}
+.no-wrap{
+	white-space: nowrap; 
+}
+.wrap{
+	white-space: wrap; 
+}
+.break-word{
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+textarea, input, .input-group-text, select{
+	background-color: var(--inputsback) !important;
+	color: var(--fifth) !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+input[type="checkbox"]:checked{
+	background-color: var(--inputsback-active) !important;
+}
+
+input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb, input[type="range"]::-ms-thumb{
+	color: var(--inputsback-active) !important;
+}
+
+input[type="range"]::-webkit-slider-runnable-track, input[type="range"]::-moz-range-track, input[type="range"]::-ms-track{
+	color: var(--inputsback) !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.sticky-top-2{
+	position: sticky !important;
+	top: 0;
+	z-index: 99;
+}
+.sticky-top-offset{
+	position: sticky !important;
+	top: 100px !important;
+}
+
+.absolute-bottom-right{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.absolute-bottom-right-10{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.absolute-bottom-left-10{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+.absolute-top-right-10{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.absolute-top-left-10{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.absolute-top-right-5{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+.absolute-top-left-5{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.fixed-bottom-right{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+.fixed-bottom-right-10{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
+.fixed-bottom-left-10{
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+}
+.fixed-top-right-10{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+.fixed-top-left-10{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+}
+
+/**
+  * BUTTONS
+  */
+.btn-primary{
+	background: var(--btn1back);
+	border: none;
+	color: #fff !important;
+	background-size: 400% 100%;
+	transition: 0.7s;
+	background-position: left center;
+}
+.btn-primary:hover{
+	border: none;
+	box-shadow: none !important;
+	background-position: right center;
+}
+.btn-primary:focus{
+	border: none;
+	box-shadow: none !important;
+}
+
+.btn-secondary{
+	background: transparent;
+	/*border: var(--btn2border);*/
+	border: none;
+	color: var(--btn2color) !important;
+}
+.btn-secondary:hover{
+	background: transparent;
+	/*border: var(--btn2border-hover);*/
+	border: none;
+	box-shadow: none !important;
+	color: var(--btn2color-hover) !important;
+}
+.btn-secondary:focus{
+	background: transparent;
+	/*border: var(--btn2border-focus);*/
+	border: none;
+	box-shadow: none !important;
+	color: var(--btn2color-focus)!important;
+}
+
+.btn-disabled{
+	background: transparent;
+	border: none;
+	color: var(--btn2color) !important;
+	opacity: 0.7 !important;
+	cursor: default;
+}
+.btn-disabled:hover{
+	background: transparent;
+	border: none;
+	color: var(--btn2color) !important;
+	opacity: 0.7 !important;
+}
+.btn-disabled:focus{
+	background: transparent;
+	border: none;
+	color: var(--btn2color) !important;
+	opacity: 0.7 !important;
+}
+
+.btn{
+	color: var(--fifth);
+	border-radius: 10px !important;
+}
+
+.ajs-message{
+	background: var(--cardbacks) !important;
+	color: var(--secondary) !important;
+}
+
+.success-check{
+	color: #1db10fc5 !important;
+}
+.error-check{
+	color: #b10f0fc5 !important;
+}
+.loading-check{
+	color: #b1a60fc5 !important;
+}
+.gray-check{
+	color: #383838c5 !important;
+}
+.check-lg{
+	font-size: 180%;
+}
+
+.add-between-row{
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width: 100%;
+	cursor: pointer;
+	position: relative;
+	opacity: 0;
+	display: block;
+}
+.add-between-row::before{
+	opacity: 0;
+	display: block;
+	content: "+";
+	background-color: #1db10fc5;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: -7px;
+	top: -2px;
+	font-size: 1.1vw;
+	padding: 0;
+	margin: 0;
+	line-height: 1.1vw;
+	font-weight: bold;
+	text-align: center;
+}
+.add-between-row>div{
+	width: 100%;
+	opacity: 0;
+	display: block;
+	border: 2px solid #1db10fc5;
+}
+.add-between-row:hover{
+	opacity: 1;
+}
+.add-between-row:hover::before{
+	opacity: 1;
+}
+.add-between-row:hover>div{
+	opacity: 1;
+}
+
+
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+	border: none;
+	float: left;
+}
+
+.rating > input { 
+	display: none; 
+} 
+.rating > label:before { 
+	margin: 5px;
+	font-size: 1.25em;
+	font-family: FontAwesome;
+	display: inline-block;
+	content: "\f005";
+}
+
+.rating > .half:before { 
+	content: "\f089";
+	position: absolute;
+}
+
+.rating > label { 
+	color: #ddd; 
+	float: right; 
+}
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: var(--secondary);  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #6c757d;  } 
+
+  /* LOADING BAR */
+.dotsLoader {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	color: #119C32;
+	box-shadow: 33.4px 0 0 12.3px, 66.8px 0 0 5.3px, 100.19999999999999px 0 0 0;
+	transform: translateX(-66.8px);
+	animation: dots-ijr34dhg 0.6s infinite alternate linear;
+}
+
+@keyframes dots-ijr34dhg {
+	50% {
+		box-shadow: 33.4px 0 0 5.3px, 66.8px 0 0 12.3px, 100.19999999999999px 0 0 5.3px;
+	}
+
+	100% {
+		box-shadow: 33.4px 0 0 0, 66.8px 0 0 5.3px, 100.19999999999999px 0 0 12.3px;
+	}
+}
+
+
+.notifer{
+	position: relative !important;
+}
+.notifer-card{
+	overflow: scroll;
+	height: 350px;
+}
+.notifer-buble{
+	position: absolute !important;
+	top: -18px !important;
+	right: -13px !important;
+	border-radius: 100% !important;
+	background: #b10f0fc5 !important;
+	color: white !important;
+	padding: 0px 7px 0px 7px;
+}
+
+.after-hidden::after{
+	display: none !important;
+}
+
+.bordered-row{
+	border-left: 5px solid;
+	border-left-color: var(--back);
+	font-weight: bold;
+	background: linear-gradient(45deg, var(--back1), var(--back2));
+}
+
+.as-button{
+	cursor: pointer;
+}
+
+.code{
+	background: var(--inputsback);
+	color: inherit;
+	padding: 3px;
+	border-radius: 2px;
+}
+/*.code::before{
+	content: "> ";
+}*/
+
+
+.tooltip1 {
+	position: relative;
+	cursor: pointer;
+}
+.tooltiptext1 {
+	visibility: hidden;
+	width: 250px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -125px;
+}
+
+.tooltip1:hover .tooltiptext1 {
+  	visibility: visible;
+}
+
+.circle{
+	display: inline-block;
+	margin-right: 15px;
+	transform: translateY(28%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: var(--color);
+	box-shadow: attr(color) 0px 0px 25px;
+}
+.circle-sm{
+	display: inline-block;
+	margin-right: 15px;
+	transform: translateY(28%);
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: var(--color);
+}
+.working-circle{
+	background: rgba(0, 200, 10, .8);
+	box-shadow: rgba(0, 200, 10, .8) 0px 0px 25px;
+}
+.error-circle{
+	background: rgba(200, 10, 0, .8);
+	box-shadow: rgba(200, 10, 0, .8) 0px 0px 25px;
+}
+
+.dialy-ratio{
+	display: inline-block;
+	width: calc(1.111% - 4px);
+	margin-right: 4px;
+	height: 25px;
+	border-radius: 3px;
+}
+
+.disk{
+	background:rgba(236, 98, 0, 0.2);
+	height: 10px;
+}
+.disk-used {
+	height: 100%;
+	width: var(--width);
+	background: var(--secondary);
+}

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://zabak.eu
+
+# Sitemaps
+Sitemap: https://zabak.eu/sitemap.xml
