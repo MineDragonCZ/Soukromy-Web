@@ -49,7 +49,7 @@ include("tools/cfg/phpPage.php");
 	<div class="col-12">
 		<div class="karta-normal">
 			<div class="row jsutify-content-center">
-				<div class="col-6 my-3">
+				<div class="col-xl-6 col-12 my-3">
 					<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
 						<div class="row mt-2">
 							<div class="col-xl-4 col-1"></div>
@@ -93,7 +93,7 @@ include("tools/cfg/phpPage.php");
 						</div>
 					</div>
 				</div>
-				<div class="col-6 my-3">
+				<div class="col-xl-6 col-12 my-3">
 					<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
 						<div class="row mt-2">
 							<div class="col-xl-4 col-1"></div>
@@ -137,7 +137,7 @@ include("tools/cfg/phpPage.php");
 						</div>
 					</div>
 				</div>
-				<div class="col-6 my-3">
+				<div class="col-xl-6 col-12 my-3">
 					<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
 						<div class="row mt-2">
 							<div class="col-xl-4 col-1"></div>
@@ -176,7 +176,7 @@ include("tools/cfg/phpPage.php");
 						</div>
 					</div>
 				</div>
-				<div class="col-6 my-3">
+				<div class="col-xl-6 col-12 my-3">
 					<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
 						<div class="row mt-2">
 							<div class="col-xl-4 col-1"></div>
