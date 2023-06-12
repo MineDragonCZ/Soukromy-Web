@@ -49,6 +49,7 @@ body{
 
 *{
 	transition: color, background-color 0.7s ease-in-out;
+	scroll-margin-top: 7em;
 }
 
 .div-center{

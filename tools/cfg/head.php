@@ -37,7 +37,7 @@
 	<link rel="icon" type="image/x-icon" href="/tools/src/imgs/loga/logo2.png">
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/tools/src/css/main-76.css">
+	<link rel="stylesheet" href="/tools/src/css/main-77.css">
 
 	<!-- EXTERNAL -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

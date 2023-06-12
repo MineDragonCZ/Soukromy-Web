@@ -401,7 +401,7 @@ function Position(obj) {
 	}
 }
 function scrollToContent() {
-	window.scroll(0, Position(document.getElementById("scroll_box")) - 35);
+	window.scroll(0, Position(document.getElementById("scroll_box")) - 100);
 	//window.scroll(0, screen.height);
 }
 
