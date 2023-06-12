@@ -47,6 +47,10 @@ body{
 	position: relative;
 }
 
+*{
+	transition: color, background-color 0.7s ease-in-out;
+}
+
 .div-center{
 	display: flex;
 	justify-content: center;
@@ -105,7 +109,7 @@ a:focus{
 	width: 100%;
 	left: 0;
 	z-index: -2;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.7s ease-in-out;
 }
 
 .backImg-fixed{
@@ -255,27 +259,27 @@ header{
 header > .waves > .p1{
 	fill: var(--waves1);
 	/*animation: waving 25s infinite ease-in-out;*/
-	transition: all 0.5s ease-in-out;
+	transition: all 0.7s ease-in-out;
 }
 header > .waves > .p2{
 	fill: var(--waves2);
 	/*animation: waving-reverse 45s infinite ease-in-out;*/
-	transition: all 0.5s ease-in-out;
+	transition: all 0.7s ease-in-out;
 }
 header > .waves > .p3{
 	fill: var(--waves3);
 	/*animation: waving 55s infinite ease-in-out;*/
-	transition: all 0.5s ease-in-out;
+	transition: all 0.7s ease-in-out;
 }
 header > .waves > .p4{
 	fill: var(--waves4);
 	/*animation: waving-reverse 68s infinite ease-in-out;*/
-	transition: all 0.5s ease-in-out;
+	transition: all 0.7s ease-in-out;
 }
 header > .waves > .p5{
 	fill: var(--waves5);
 	/*animation: waving 75s infinite ease-in-out;*/
-	transition: all 0.5s ease-in-out;
+	transition: all 0.7s ease-in-out;
 }
 
 .h-title{
@@ -318,7 +322,7 @@ header > .text-dec-3{
 
 
 .navbar{
-	transition: all 0.5s ease-in-out !important;
+	transition: all 0.7s ease-in-out !important;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -470,12 +474,12 @@ header > .text-dec-3{
 	padding: 45px;
 	border-radius: 57px;
 
-	box-shadow: -53px 53px 45px 10px rgba(0,0,0,0.3);
+	box-shadow: var(--shadow);
 	z-index: 11;
 	position: relative;
 }
 .karta-normal-shadow{
-	box-shadow: -53px 53px 45px 10px rgba(0,0,0,0.3);
+	box-shadow: var(--shadow);
 }
 .karta-normal-p-min{
 	background: var(--cardbacks);
@@ -483,7 +487,7 @@ header > .text-dec-3{
 	padding: 25px;
 	border-radius: 37px;
 
-	box-shadow: -53px 53px 45px 10px rgba(0,0,0,0.3);
+	box-shadow: var(--shadow);
 	z-index: 11;
 	position: relative;
 }
@@ -579,6 +583,9 @@ footer{
 
 .spacer{
 	padding-bottom: 50px;
+}
+.spacer-md{
+	padding-bottom: 75px;
 }
 .spacer-lg{
 	padding-bottom: 150px;
@@ -1055,4 +1062,13 @@ input[type="range"]::-webkit-slider-runnable-track, input[type="range"]::-moz-ra
 	height: 100%;
 	width: var(--width);
 	background: var(--secondary);
+}
+
+/*
+ALERTS
+*/
+
+.swal2-popup{
+	background: var(--primary) !important;
+	color: var(--fifth) !important;
 }

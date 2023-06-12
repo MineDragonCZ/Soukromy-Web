@@ -13,7 +13,7 @@
 			"url" => "#about",
 		],
 
-		'<i class="fa-solid fa-diagram-project"></i> MÉ PRÁCE' => [
+		'<i class="fa-solid fa-diagram-project"></i> MÁ PRÁCE' => [
 			"url" => "#portfolio",
 		],
 
@@ -21,7 +21,7 @@
 			"url" => "#reference",
 		],
 	
-		'<i class="fa-solid fa-bars-staggered"></i> PRÁCE' => [
+		'<i class="fa-solid fa-bars-staggered"></i> PROJEKTY' => [
 			"dropid" => "more",
 			"urls" => [
 				'Žabák.eu <i class="fa-solid fa-arrow-up-right-from-square"></i>' => [

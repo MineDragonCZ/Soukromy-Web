@@ -22,6 +22,8 @@ function switchModes(change) {
 		setRootVar('--footer', '#171924');
 		setRootVar('--fifth', '#DBD3C8');
 
+		setRootVar('--shadow', 'none');
+
 		setRootVar('--cardbacks', '#171924');
 		setRootVar('--navlink', '#fff');
 
@@ -62,6 +64,8 @@ function switchModes(change) {
 		setRootVar('--third', '#7C7C7C');
 		setRootVar('--footer', '#CDD0DA');
 		setRootVar('--fifth', '#46423C');
+
+		setRootVar('--shadow', '-53px 53px 45px 10px rgba(0,0,0,0.3)');
 
 		setRootVar('--cardbacks', '#CDD0DA');
 		setRootVar('--navlink', '#000');

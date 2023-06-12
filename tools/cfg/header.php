@@ -19,7 +19,7 @@
 	</div>
 </div>
 <!-- FOR DESKTOP -->
-<header class="backImg">
+<header class="backImg d-none d-md-block">
 	<div class="text-dec text-dec-1"></div>
 	<div class="text-dec text-dec-2"></div>
 	<div class="text-dec text-dec-3"></div>
@@ -41,4 +41,29 @@
 	</div>
 	<?php include("waves.php"); ?>
 </header>
+
+<!-- FOR MOBILE -->
+<header class="backImg d-md-none d-block">
+	<!--<div class="text-dec text-dec-1"></div>
+	<div class="text-dec text-dec-2"></div>
+	<div class="text-dec text-dec-3"></div>-->
+	<div class="row">
+		<div class="col-xl-7 col-12 justify-content-center">
+			<div class="h-title no-wrap mt-3">
+				<?= $pageTitle; ?>
+			</div>
+			<div class="h-desc no-wrap">
+				<?= $pageDesc; ?>
+			</div>
+		</div>
+	</div>
+	<div class="preloader">
+		<div class="preloader1">.</div>
+		<div class="preloader2">.</div>
+		<div class="preloader3">.</div>
+		<div class="preloader4">.</div>
+	</div>
+	<?php include("waves.php"); ?>
+</header>
+
 <div id="scroll_box"></div>

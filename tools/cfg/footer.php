@@ -65,5 +65,29 @@ if ($footerScript) {
 	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 	return new bootstrap.Tooltip(tooltipTriggerEl)
 	})
+
+	if(!getCookie("susenky")){
+		Swal.fire({
+			title: 'Sušenky!',
+			html: 'Tento web používá soubory cookie.<br/>Pokračováním s tímto faktem souhlasíte.',
+			icon: 'warning',
+			iconColor: '#12BA39',
+			confirmButtonText: 'Jasně, chápu!',
+		}).then((e) => {
+			if(e.isDismissed || e.isConfirmed || e.isDenied){
+				setCookie("susenky", "1");
+			}
+		});
+
+		let t = document.getElementsByClassName('swal2-confirm');
+		for(let i = 0; i < t.length; i++){
+			t[i].className = 'btn btn-primary';
+		}
+		let tt = document.getElementsByClassName('swal2-deny');
+		for(let i = 0; i < tt.length; i++){
+			tt[i].className = 'btn btn-secondary';
+		}
+	}
+
 </script>
 </html>

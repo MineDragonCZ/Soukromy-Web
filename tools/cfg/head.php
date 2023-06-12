@@ -37,15 +37,14 @@
 	<link rel="icon" type="image/x-icon" href="/tools/src/imgs/loga/logo2.png">
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-	<link rel="stylesheet" href="/tools/src/css/main-69.css">
+	<link rel="stylesheet" href="/tools/src/css/main-76.css">
 
 	<!-- EXTERNAL -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 	<script src="https://kit.fontawesome.com/0dd034efb8.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 	<!-- INTERNAL -->
 	<script src="/tools/src/js/cookies.js"></script>
