@@ -231,39 +231,33 @@ function dismissAlerts() {
 }
 
 function alertSuccess(mess, time) {
-	alertify.set('notifier', 'position', 'top-right');
-	alertify.notify(
-		`
-		<div class="row align-items-center">
-			<div class="col-3 center"><span class="text-xxl"><i class="fa-solid fa-check success-check"></i></span></div>
-			<div class="col-9">` + mess + `</div>
-		</div>`
-
-		, 'success', time, function () { });
+	alert(mess, "success", time);
 }
 
 function alertError(mess, time) {
-	alertify.set('notifier', 'position', 'top-right');
-	alertify.notify(
-		`
-		<div class="row align-items-center">
-			<div class="col-3 center"><span class="text-xxl"><i class="fa-solid fa-xmark error-check"></i></span></div>
-			<div class="col-9">` + mess + `</div>
-		</div>`
-
-		, 'error', time, function () { });
+	alert(mess, "error", time);
 }
 
 function alertLoading(mess, time) {
-	alertify.set('notifier', 'position', 'top-right');
-	alertify.notify(
-		`
-		<div class="row align-items-center">
-			<div class="col-3 center"><span class="text-xxl"><i class="fa-solid fa-spinner loading-check"></i></span></div>
-			<div class="col-9">` + mess + `</div>
-		</div>`
+	alert(mess, "info", time);
+}
 
-		, 'loading', time, function () { });
+function alert(mess, type, time){
+	if(time == null || time == undefined) time = 2;
+	const Toast = Swal.mixin({ 
+		toast: true,
+		position: 'top-right',
+		showConfirmButton: false,
+		timer: time * 1000,
+		timerProgressBar: true,
+		didOpen: (toast) => {
+		}
+	});
+	
+	Toast.fire({
+		icon: type,
+		title: mess
+	});
 }
 
 

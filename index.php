@@ -14,9 +14,9 @@ include("tools/cfg/phpPage.php");
 		Kdo jsem?
 	</p>
 </div>
-<div class="col-12">
+<div class="col-12 px-5">
 	<div class="row align-items-center justify-content-center">
-		<div class="col-lg-7 col-12">
+		<div class="col-lg-8 col-12">
 			<div class="karta-normal row justify-content-center">
 				<div class="card-desc mb-2 col-12">
 					Jmenuji se Vojtěch Šín a jsem studentem na <b>Střední Průmyslové Škole Zlín</b>. Věnuji se převážně <b>Elektru</b>, ale i <b>Programování webových stránek</b>/prezentací a <b>minecraft pluginů</b>/módů.
@@ -36,7 +36,7 @@ include("tools/cfg/phpPage.php");
 				</div>
 			</div>
 		</div>
-		<div class="col-4">
+		<div class="col-4 d-none d-lg-block">
 			<img src="/tools/src/imgs/ikonky/avatarr.svg" width="100%"/>
 		</div>
 	</div>
@@ -48,168 +48,250 @@ include("tools/cfg/phpPage.php");
 			Má práce:
 		</p>
 	</div>
-	<div class="col-12">
-		<div class="karta-normal">
-			<div class="row jsutify-content-center">
-				<div class="col-xl-6 col-12 my-3">
-					<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
-						<div class="row mt-2">
-							<div class="col-xl-4 col-1"></div>
-							<div class="col-xl-4 col-10">
-								<img loading="lazy" class="img-100" src="/tools/src/imgs/ikonky/frog.png" alt="">
-							</div>
-							<div class="col-xl-4 col-1"></div>
-							<div class="my-2 col-12">
-								<div class="row justify-content-center align-items-center flex-nowrap">
-									<div class="col-auto no-wrap right">
-										<div class="ms-4">
-											<span class="card-title">Žabák.eu</span></br>
-											<span class="card-desc">Web pro minecraft server</span>
+</div>
+<div class="col-12 px-5">
+	<div class="karta-normal">
+		<div class="row justify-content-center">
+			<div class="col-xl-4 col-12 my-3">
+				<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
+					<div class="row mt-2">
+						<div class="col-xl-4 col-1"></div>
+						<div class="col-xl-4 col-10">
+							<img loading="lazy" class="img-100" src="https://zabak.eu/tools/src/imgs/loga/logo_nav.webp" alt="">
+						</div>
+						<div class="col-xl-4 col-1"></div>
+						<div class="my-2 col-12">
+							<div class="row justify-content-center align-items-center flex-nowrap">
+								<div class="col-auto no-wrap right">
+									<div class="ms-4">
+										<span class="card-title">Žabák.eu</span></br>
+										<span class="card-desc">Web pro minecraft server</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="https://zabak.eu/" target="_blank">
+										<div class="btn btn-primary p-3 me-4" style="z-index: 99;">
+											Navštívit web <i class="fa-solid fa-arrow-up-right-from-square"></i>
 										</div>
-									</div>
-									<div class="col-auto">
-										<a href="https://zabak.eu/" target="_blank">
-											<div class="btn btn-primary p-3 me-4" style="z-index: 99;">
-												Navštívit web <i class="fa-solid fa-arrow-up-right-from-square"></i>
-											</div>
-										</a>
-									</div>
+									</a>
 								</div>
-								<div class="col-12 center mt-1">
-									<div class="row justify-content-center">
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #1984D577;">WEB</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #19D5A377;">PROPOJENÍ S MC</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #B6D51977;">ADMINISTRACE</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #D5971977;">TICKETY</div>
-									</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #1984D577;">WEB</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D5A377;">PROPOJENÍ S MC</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #B6D51977;">ADMINISTRACE</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #D5971977;">TICKETY</div>
 								</div>
-								<div class="col-12 center mt-1">
-									<div class="row justify-content-center">
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #7119D577;">PHP</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #19D58477;">SQL</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #1997D577;">JQUERY</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #19D53877;">AJAX</div>
-									</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #7119D577;">PHP</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D58477;">SQL</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #1997D577;">JQUERY</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D53877;">AJAX</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-6 col-12 my-3">
-					<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
-						<div class="row mt-2">
-							<div class="col-xl-4 col-1"></div>
-							<div class="col-xl-4 col-10">
-								<img loading="lazy" class="img-100" src="/tools/src/imgs/ikonky/stargate.png" alt="">
-							</div>
-							<div class="col-xl-4 col-1"></div>
-							<div class="my-2 col-12">
-								<div class="row justify-content-center align-items-center flex-nowrap">
-									<div class="col-auto no-wrap right">
-										<div class="ms-4">
-											<span class="card-title">Just Stargate Mod</span></br>
-											<span class="card-desc">Mod do minecraftu a web stránky</span>
+			</div>
+			<div class="col-xl-4 col-12 my-3">
+				<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
+					<div class="row mt-2">
+						<div class="col-xl-4 col-1"></div>
+						<div class="col-xl-4 col-10">
+							<img loading="lazy" class="img-100" src="https://justsgmod.eu/config/src/imgs/main/logo.png" alt="">
+						</div>
+						<div class="col-xl-4 col-1"></div>
+						<div class="my-2 col-12">
+							<div class="row justify-content-center align-items-center flex-nowrap">
+								<div class="col-auto no-wrap right">
+									<div class="ms-4">
+										<span class="card-title">Just Stargate Mod</span></br>
+										<span class="card-desc">Mod do minecraftu a web stránky</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="https://justsgmod.eu/" target="_blank">
+										<div class="btn btn-primary p-3 me-4" style="z-index: 99;">
+											Navštívit web <i class="fa-solid fa-arrow-up-right-from-square"></i>
 										</div>
-									</div>
-									<div class="col-auto">
-										<a href="https://justsgmod.eu/" target="_blank">
-											<div class="btn btn-primary p-3 me-4" style="z-index: 99;">
-												Navštívit web <i class="fa-solid fa-arrow-up-right-from-square"></i>
-											</div>
-										</a>
-									</div>
+									</a>
 								</div>
-								<div class="col-12 center mt-1">
-									<div class="row justify-content-center">
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #1984D577;">WEB</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #20537A77;">MÓD (FORGE)</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #C219D577;">ZMĚNA JAZYKU</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #B6D51977;">ADMINISTRACE</div>
-									</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #1984D577;">WEB</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #20537A77;">MÓD (FORGE)</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #C219D577;">ZMĚNA JAZYKU</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #B6D51977;">ADMINISTRACE</div>
 								</div>
-								<div class="col-12 center mt-1">
-									<div class="row justify-content-center">
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #7119D577;">PHP</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #19D58477;">SQL</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #1997D577;">JQUERY</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #19D53877;">AJAX</div>
-									</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #D5771977;">JAVA</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #7119D577;">PHP</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D58477;">SQL</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #1997D577;">JQUERY</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D53877;">AJAX</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-6 col-12 my-3">
-					<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
-						<div class="row mt-2">
-							<div class="col-xl-4 col-1"></div>
-							<div class="col-xl-4 col-10">
-								<img loading="lazy" class="img-100" src="/tools/src/imgs/ikonky/send.png" alt="">
+			</div>
+			<div class="col-xl-4 col-12 my-3">
+				<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
+					<div class="row mt-2">
+						<div class="col-xl-4 col-1"></div>
+						<div class="col-xl-4 col-10">
+							<img loading="lazy" class="img-100" src="https://dev.majnex.eu/inc/src/images/loga/Logo.png" alt="">
+						</div>
+						<div class="col-xl-4 col-1"></div>
+						<div class="my-2 col-12">
+							<div class="row justify-content-center align-items-center flex-nowrap">
+								<div class="col-auto no-wrap right">
+									<div class="ms-4">
+										<span class="card-title">Majnex.eu</span></br>
+										<span class="card-desc">Web pro minecraft server</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a href="https://majnex.eu/" target="_blank">
+										<div class="btn btn-primary p-3 me-4" style="z-index: 99;">
+											Navštívit web <i class="fa-solid fa-arrow-up-right-from-square"></i>
+										</div>
+									</a>
+								</div>
 							</div>
-							<div class="col-xl-4 col-1"></div>
-							<div class="my-2 col-12">
-								<div class="row justify-content-center align-items-center flex-nowrap">
-									<div class="col-auto no-wrap right">
-										<div class="ms-4">
-											<span class="card-title">Cross-Server Command</span></br>
-											<span class="card-desc">Plugin na posílání příkazů s pomocí MySQL</span>
-										</div>
-									</div>
-									<div class="col-auto">
-										<div class="btn btn-primary p-3 me-4 disabledd disabledd-2" style="z-index: 99;">
-											Zakoupit <i class="fa-solid fa-cart-shopping"></i>
-										</div>
-									</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #1984D577;">WEB</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D5A377;">PROPOJENÍ S MC</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #B6D51977;">ADMINISTRACE</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #D5971977;">TICKETY</div>
 								</div>
-								<div class="col-12 center mt-1">
-									<div class="row justify-content-center">
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #1984D577;">PLUGIN</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #C219D577;">BUNGEECORD</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #19D5A377;">PROPOJENÍ S WEBEM</div>
-									</div>
-								</div>
-								<div class="col-12 center mt-1">
-									<div class="row justify-content-center">
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #D5771977;">JAVA</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #19D58477;">SQL</div>
-									</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #7119D577;">PHP</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D58477;">SQL</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #1997D577;">JQUERY</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D53877;">AJAX</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-6 col-12 my-3">
-					<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
-						<div class="row mt-2">
-							<div class="col-xl-4 col-1"></div>
-							<div class="col-xl-4 col-10">
-								<img loading="lazy" class="img-100" src="/tools/src/imgs/ikonky/blockk.png" alt="">
+			</div>
+			<div class="col-xl-4 col-12 my-3">
+				<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
+					<div class="row mt-2">
+						<div class="col-xl-4 col-1"></div>
+						<div class="col-xl-4 col-10">
+							<img loading="lazy" class="img-100" src="/tools/src/imgs/ikonky/send.png" alt="">
+						</div>
+						<div class="col-xl-4 col-1"></div>
+						<div class="my-2 col-12">
+							<div class="row justify-content-center align-items-center flex-nowrap">
+								<div class="col-auto no-wrap right">
+									<div class="ms-4">
+										<span class="card-title">Cross-Server Command</span></br>
+										<span class="card-desc">Plugin na posílání příkazů s pomocí MySQL</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="btn btn-primary p-3 me-4 disabledd disabledd-2" style="z-index: 99;">
+										Zakoupit <i class="fa-solid fa-cart-shopping"></i>
+									</div>
+								</div>
 							</div>
-							<div class="col-xl-4 col-1"></div>
-							<div class="my-2 col-12">
-								<div class="row justify-content-center align-items-center flex-nowrap">
-									<div class="col-auto no-wrap right">
-										<div class="ms-4">
-											<span class="card-title">Per-World Command Blocker</span></br>
-											<span class="card-desc">Plugin na zakázání příkazů v určitých světech</span>
-										</div>
-									</div>
-									<div class="col-auto">
-										<div class="btn btn-primary p-3 me-4 disabledd disabledd-2" style="z-index: 99;">
-											Zakoupit <i class="fa-solid fa-cart-shopping"></i>
-										</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #1984D577;">PLUGIN</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #C219D577;">BUNGEECORD</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D5A377;">PROPOJENÍ S WEBEM</div>
+								</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #D5771977;">JAVA</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #19D58477;">SQL</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-12 my-3">
+				<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
+					<div class="row mt-2">
+						<div class="col-xl-4 col-1"></div>
+						<div class="col-xl-4 col-10">
+							<img loading="lazy" class="img-100" src="/tools/src/imgs/ikonky/blockk.png" alt="">
+						</div>
+						<div class="col-xl-4 col-1"></div>
+						<div class="my-2 col-12">
+							<div class="row justify-content-center align-items-center flex-nowrap">
+								<div class="col-auto no-wrap right">
+									<div class="ms-4">
+										<span class="card-title">Per-World Command Blocker</span></br>
+										<span class="card-desc">Plugin na zakázání příkazů v určitých světech</span>
 									</div>
 								</div>
-								<div class="col-12 center mt-1">
-									<div class="row justify-content-center">
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #1984D577;">PLUGIN</div>
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #C219D577;">PAPER</div>
+								<div class="col-auto">
+									<div class="btn btn-primary p-3 me-4 disabledd disabledd-2" style="z-index: 99;">
+										Zakoupit <i class="fa-solid fa-cart-shopping"></i>
 									</div>
 								</div>
-								<div class="col-12 center mt-1">
-									<div class="row justify-content-center">
-										<div class="col-auto bublifuk no-wrap m-1" style="--back: #D5771977;">JAVA</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #1984D577;">PLUGIN</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #C219D577;">PAPER</div>
+								</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #D5771977;">JAVA</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-12 my-3">
+				<div class="back-karta h-100 embed-karta" style="--color: #119C32AA;">
+					<div class="row mt-2">
+						<div class="col-xl-4 col-1"></div>
+						<div class="col-xl-4 col-10">
+							<img loading="lazy" class="img-100" src="/tools/src/imgs/ikonky/no-speak2.png" alt="">
+						</div>
+						<div class="col-xl-4 col-1"></div>
+						<div class="my-2 col-12">
+							<div class="row justify-content-center align-items-center flex-nowrap">
+								<div class="col-auto no-wrap right">
+									<div class="ms-4">
+										<span class="card-title">Anti-chat Plugin</span></br>
+										<span class="card-desc">Plugin na zakázání psaní do chatu</span>
 									</div>
+								</div>
+								<div class="col-auto">
+									<div class="btn btn-primary p-3 me-4 disabledd disabledd-2" style="z-index: 99;">
+										Zakoupit <i class="fa-solid fa-cart-shopping"></i>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #1984D577;">PLUGIN</div>
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #C219D577;">PAPER</div>
+								</div>
+							</div>
+							<div class="col-12 center mt-1">
+								<div class="row justify-content-center">
+									<div class="col-auto bublifuk no-wrap m-1 text-sm" style="--back: #D5771977;">JAVA</div>
 								</div>
 							</div>
 						</div>
@@ -218,6 +300,8 @@ include("tools/cfg/phpPage.php");
 			</div>
 		</div>
 	</div>
+</div>
+<div class="container-xl">
 	<div class="spacer-md"></div>
 	<div class="col-12" id="reference">
 		<p class="topic-title underlined-120">
